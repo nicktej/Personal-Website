@@ -335,31 +335,12 @@
               <h3 class="mb-5">CIFAR-10 Analysis</h3>
 
               <div class="subheading mb-3">Description</div>
-              <p>This is my first AI project using TensorFlow. I used TensorFlow to analyze the CIFAR-10 images.</p>
-
-              <br>
-              <div class="subheading mb-3">Features</div>
-              <ul>
-                <li>Ability to enter income, expenditure into categories</li>
-                <li>View list of expenditures</li>
-                <li>Visualize the categories in a pie chart and toggle different views</li>
-                <li>Email expenditures</li>
-                <li>Convert expenditures from any currency to any currency using the latest rates</li>
-                <li>A splash screen of the app logo</li>
-              </ul>
+              <p>This is my first AI project using TensorFlow. I used TensorFlow to analyze the CIFAR-10 images. I had 5 hidden layers and pooling layers, and used softmax cross enthropy with logits. The learning rate was 0.001, and I did this for 50 epochs. Besides that, I had a seperate python script that allowed me to visualize the individual image of choice.</p>
+              <p>I measured the accuracy and best loss for the training and validation sets. The final accuracy was around 65-70%. In the future, I hope to improve the AI by transforming, rotating, and inversing the image. I hope to achieve an accuracy of over 90%!</p>
               <br>
               <div class="subheading mb-3">Images</div>
-              <img class="imgtwo" src="img/tracker/1.png" alt="">
-              <img class="imgtwo" src="img/tracker/2.png" alt="">
-              <p>Main Screen and list of expenditures</p>
-              <br>
-              <img class="imgtwo" src="img/tracker/3.png" alt="">
-              <img class="imgtwo" src="img/tracker/4.png" alt="">
-              <p>Adding an expenditure and converting currencies</p>
-              <br>
-              <img class="imgtwo" src="img/tracker/5.png" alt="">
-              <img class="imgtwo" src="img/tracker/6.png" alt="">
-              <p>Pie chart views</p>
+              <img class="img" src="img/cifar/1.png" alt="">
+              <p>Graph showing the accuracy of the training and validation sets</p>
               <br>
             </div>
           </div>
@@ -370,68 +351,63 @@
               <h3 class="mb-5">Breakout</h3>
 
               <div class="subheading mb-3">Description</div>
-              <p>This is my favorite Android project! It is an application that allows me to log and email my expenses to my parents every month. Prior to creating the application, I would always key my expenses on my phone before entering it onto my computer. This was tedious and the information would sometimes get lost in translation.</p>
-
-              <p>As I was studying abroad in Budapest for a semester, the application I built automatically converted the recorded transactions into US dollars, simplifying the conversion process. It also allowed users to create visuals / charts of their expenditure. That was definitely one of the key moments where I was encouraged to use my passion to create to solve an everyday problem.</p>
+              <p>Breakout is the class 1970s arcade game where the player has to make a ball break through layers of bricks to get through to the other side. I built this because I was very interested in making AIs that could win games. I had help from a Udemy course to accomplish this.</p>
+              <p>I made an AI using the powerful Asynchronous Advantage Actor Critic (A3C) reinforcement learning algorithm. This algorithm basically allowed the AI to know what the direction of the ball is at a given time and in the past, to better predict what the AI should do with the bar. The AI has 4 layers and an LSTM layer. The AI would play the game, and save its performance in the form of videos.</p>
               <br>
-              <div class="subheading mb-3">Features</div>
-              <ul>
-                <li>Ability to enter income, expenditure into categories</li>
-                <li>View list of expenditures</li>
-                <li>Visualize the categories in a pie chart and toggle different views</li>
-                <li>Email expenditures</li>
-                <li>Convert expenditures from any currency to any currency using the latest rates</li>
-                <li>A splash screen of the app logo</li>
-              </ul>
+              <div class="subheading mb-3">Videos</div>
+              <video class="vid" controls>
+                <source src="img/breakout/1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              <p>The AI's first attempt</p>
               <br>
-              <div class="subheading mb-3">Images</div>
-              <img class="imgtwo" src="img/tracker/1.png" alt="">
-              <img class="imgtwo" src="img/tracker/2.png" alt="">
-              <p>Main Screen and list of expenditures</p>
+              <video class="vid" controls>
+                <source src="img/breakout/2.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+              <p>The AI's middle attempt</p>
               <br>
-              <img class="imgtwo" src="img/tracker/3.png" alt="">
-              <img class="imgtwo" src="img/tracker/4.png" alt="">
-              <p>Adding an expenditure and converting currencies</p>
+              <video class="vid" controls>
+                <source src="img/breakout/3.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+              <p>The AI's final attempt attempt</p>
               <br>
-              <img class="imgtwo" src="img/tracker/5.png" alt="">
-              <img class="imgtwo" src="img/tracker/6.png" alt="">
-              <p>Pie chart views</p>
-              <br>
+              </div>
             </div>
-          </div>
 
-          <div class="my-auto" id="texttoaudio">
-            <div class="my-auto">
-              <br>
-              <h3 class="mb-5">Text-to-Audio Converter</h3>
+            <div class="my-auto" id="texttoaudio">
+              <div class="my-auto">
+                <br>
+                <h3 class="mb-5">Text-to-Audio Converter</h3>
 
-              <div class="subheading mb-3">Description</div>
-              <p>This project is still in development.</p>
-              <p>The idea is to create a web application hosted on AWS that will allow users to convert text into an audio file. Texts can either be in the form of pdfs or just plain text in a textbox. The user will then choose the voice type and accents, and run the program to generate the audio file! I hope to use Rekognition, Polly, and other AWS services for this project.</p>
-              <p>I was inspired to create this through my habit of listening to podcasts. I hope to create audiobooks using this program, and also be able to listen to my exam notes or anything of interest in general.</p>
-              <br>
-              <div class="subheading mb-3">Intended Features</div>
-              <ul>
-                <li>Able to load a pdf or texts onto the application</li>
-                <li>Ability to choose voice type and accents for the audio file</li>
-                <li>Automatically download the audio file when the conversion has completed</li>
-              </ul>
-              <br>
+                <div class="subheading mb-3">Description</div>
+                <p>This project is still in development.</p>
+                <p>The idea is to create a web application hosted on AWS that will allow users to convert text into an audio file. Texts can either be in the form of pdfs or just plain text in a textbox. The user will then choose the voice type and accents, and run the program to generate the audio file! I hope to use Rekognition, Polly, and other AWS services for this project.</p>
+                <p>I was inspired to create this through my habit of listening to podcasts. I hope to create audiobooks using this program, and also be able to listen to my exam notes or anything of interest in general.</p>
+                <br>
+                <div class="subheading mb-3">Intended Features</div>
+                <ul>
+                  <li>Able to load a pdf or texts onto the application</li>
+                  <li>Ability to choose voice type and accents for the audio file</li>
+                  <li>Automatically download the audio file when the conversion has completed</li>
+                </ul>
+                <br>
+              </div>
             </div>
-          </div>
-        </section>
-      </div>
+          </section>
+        </div>
 
-      <!-- Bootstrap core JavaScript -->
-      <script src="vendor/jquery/jquery.min.js"></script>
-      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-      <!-- Plugin JavaScript -->
-      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Plugin JavaScript -->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-      <!-- Custom scripts for this template -->
-      <script src="js/resume.min.js"></script>
+        <!-- Custom scripts for this template -->
+        <script src="js/resume.min.js"></script>
 
-    </body>
+      </body>
 
-    </html>
+      </html>
