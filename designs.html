@@ -56,161 +56,169 @@
   </nav>
 
   <div class="container-fluid p-0">
-<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
-          <div class="my-auto">
-            <h2 class="mb-5">Designs</h2>
-            <p>I enjoy exploring different aspects of software engineering, including AI, web development, mobile development, cloud computing, and so on.</p>
-            <p>Here are some of my favorite projects that I am working/have worked on:</p>
-            <ul>
-              <li>
-                <a class="nav-link js-scroll-trigger" href="#texttoaudio">Text-to-Speech Converter</a>
-              </li>
-              <li >
-                <a class="nav-link js-scroll-trigger" href="#tracker">Budget Tracker</a>
-              </li>
-              <li>
-                <a class="nav-link js-scroll-trigger" href="#sortinghat">Sorting Hat</a>
-              </li>
-              <li>
-                <a class="nav-link js-scroll-trigger" href="#cifar">CIFAR-10</a>
-              </li>
-              <li>
-                <a class="nav-link js-scroll-trigger" href="#breakout">Breakout</a>
-              </li>
-            </ul>
-          </div>
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
+      <div class="my-auto">
+        <h2 class="mb-5">Designs</h2>
+        <p>Through my classes and internship, I have dived into the world of UI/UX design. It has been an enriching experience creating designs that are simple, elegant, and user-friendly. A quote by a friend that I will always keep to heart:"If you have a billion dollar product but it is poorly designed, then it isn't worth anything". I hope to continue improving my design skills and merge them with my programming abilities.</p>
+        <p>Here are some of my design projects that I have worked on:</p>
+        <ul>
+          <li>
+            <a class="nav-link js-scroll-trigger" href="#umc">User Management Center</a>
+          </li>
+          <li >
+            <a class="nav-link js-scroll-trigger" href="#saveme">Save Me! Mobile App</a>
+          </li>
+        </ul>
+      </div>
 
-          <div id="space"></div>
-          <div class="my-auto" id="texttoaudio">
-              <div class="my-auto">
-                <br>
-                <h2 class="mb-5">Text-to-Speech Converter</h2>
+      <div id="space"></div>
+      <div class="my-auto" id="umc">
+        <div class="my-auto">
+          <br>
+          <h2 class="mb-5">User Management Center</h2>
 
-                <div class="subheading mb-3">Description</div>
-                <p>Link to the application can be found <a target="_blank" href="https://dpdxzbv1mck69.cloudfront.net/">here</a>.</p>
-                <p>This project uses AWS services, and is one of my favorite AWS projects thus far! I was inspired to create this through my habit of listening to podcasts. With this, I can convert any books or study material or anything in general into audio, and can listen to them throughout the day.</p>
-                <br>
-                <div class="subheading mb-3">Infrastructure</div>
-                <p>This project uses S3, DynamoDB, Lambda, SNS, Polly, and API Gateway. For sending posts, the user interacts with the static website on S3, and any information is received by the RESTful web service exposed by Amazon API Gateway. The API Gateway triggers a lambda function, which creates an entry in DynamoDB, and sends an SNS notification to a second lambda. The second lambda function communicates with Polly to convert the text to audio, places the audio file into an S3 bucket, and updates the DynamoDB table.</p>
-                <p>For getting posts, the user interacts with the static website on S3, and any information is received by the RESTful web service exposed by Amazon API Gateway. The API Gateway tiggers a lambda function which retrieves information about the post (including the reference to Amazon S3) from the DynamoDB table.</p>
-                <br>
-                <div class="subheading mb-3">Image</div>
-                <img class="img" src="img/text-to-speech/infrastructure.png" alt="">
-                <br>
-              </div>
-            </div>
-          <div id="space"></div> 
-          <div class="my-auto" id="tracker">
-            <div class="my-auto">
-              <br>
-              <h2 class="mb-5">Budget Tracker</h2>
-
-              <div class="subheading mb-3">Description</div>
-              <p>This is my favorite Android project! It is an application that allows me to log and email my expenses to my parents every month. Prior to creating the application, I would always key my expenses on my phone before entering it onto my computer. This was tedious and the information would sometimes get lost in translation.</p>
-
-              <p>As I was studying abroad in Budapest for a semester, the application I built automatically converted the recorded transactions into US dollars, simplifying the conversion process. It also allowed users to create visuals / charts of their expenditure. That was definitely one of the key moments where I was encouraged to use my passion to create to solve an everyday problem.</p>
-              <br>
-              <div class="subheading mb-3">Features</div>
-              <ul>
-                <li>Ability to enter income, expenditure into categories</li>
-                <li>View list of expenditures</li>
-                <li>Visualize the categories in a pie chart and toggle different views</li>
-                <li>Email expenditures</li>
-                <li>Convert expenditures from any currency to any currency using the latest rates</li>
-                <li>A splash screen of the app logo</li>
-              </ul>
-              <br>
-              <div class="subheading mb-3">Images</div>
-              <img class="imgtwo" src="img/tracker/1.png" alt="">
-              <img class="imgtwo" src="img/tracker/2.png" alt="">
-              <p>Main Screen and list of expenditures</p>
-              <br>
-              <img class="imgtwo" src="img/tracker/3.png" alt="">
-              <img class="imgtwo" src="img/tracker/4.png" alt="">
-              <p>Adding an expenditure and converting currencies</p>
-              <br>
-              <img class="imgtwo" src="img/tracker/5.png" alt="">
-              <img class="imgtwo" src="img/tracker/6.png" alt="">
-              <p>Pie chart views</p>
-              <br>
-            </div>
-          </div>
-          <div id="space"></div>
-          <div class="my-auto" id="sortinghat">
-            <div class="my-auto">
-              <br>
-              <h2 class="mb-5">Sorting Hat</h2>
-
-              <div class="subheading mb-3">Description</div>
-              <p>Sorting Hat is a Java program created by my team to allocate first year students into their respective mandatory first year classes at Lewis & Clark College. This was a team project, consisting of Mack Beveridge, Maxwell Levin, James Tostado, Sam Peers Nitzberg, and Lars Mayrand. With this program, the college's staff can perform the task within minutes, whereas manually it would have taken them over a week.</p>
-              <p>The program uses a modified Hungarian algorithm that takes a cost matrix of variables such as student preferences, sport, gender, etc. Using the GUI, the user would input CSV files for the data to be parsed. The results are outputted into a CSV file, and a report is generated on the GUI. The program takes milliseconds to complete, and on average, 92% of students get into their top 3 choices.</p>
-              <br>
-              <div class="subheading mb-3">Features</div>
-              <ul>
-                <li>Modified Hungarian Algorithm for optimized runtime</li>
-                <li>Multi-variable sort (6 preferences, athlete status, gender, previous professor status)</li>
-                <li>Error handling (Checks for human error including presence of headers, duplicated students, duplicated courses, etc)</li>
-                <li>Headers are hyperparameters (can vary in terms of text)</li>
-                <li>Generates a report (Shows success percentages, program efficiency, etc)</li>
-              </ul>
-              <br>
-              <div class="subheading mb-3">Images</div>
-              <img class="img" src="img/sortinghat/1.png" alt="">
-              <p>Instructions are available for users</p>
-              <br>
-              <img class="img" src="img/sortinghat/2.png" alt="">
-              <p>Uploaded necessary files using the buttons on the left</p>
-              <br>
-              <img class="img" src="img/sortinghat/3.png" alt="">
-              <p>Program ran successfully! Report generated on GUI, and output CSV file is created</p>
-              <br>
-            </div>
-          </div>
-          <div id="space"></div>
-          <div class="my-auto" id="cifar">
-            <div class="my-auto">
-              <br>
-              <h2 class="mb-5">CIFAR-10 Analysis</h2>
-
-              <div class="subheading mb-3">Description</div>
-              <p>This is my first AI project using TensorFlow. I used TensorFlow to analyze the CIFAR-10 images. I had 5 hidden layers and pooling layers, and used softmax cross enthropy with logits. The learning rate was 0.001, and I did this for 50 epochs. Besides that, I had a seperate python script that allowed me to visualize the individual image of choice.</p>
-              <p>I measured the accuracy and best loss for the training and validation sets. The final accuracy was around 65-70%. In the future, I hope to improve the AI by transforming, rotating, and inversing the image. I hope to achieve an accuracy of over 90%!</p>
-              <br>
-              <div class="subheading mb-3">Images</div>
-              <img class="img" src="img/cifar/1.png" alt="">
-              <p>Graph showing the accuracy of the training and validation sets</p>
-              <br>
-            </div>
-          </div>
-          <div id="space"></div>
-          <div class="my-auto" id="breakout">
-            <div class="my-auto">
-              <br>
-              <h2 class="mb-5">Breakout</h2>
-
-              <div class="subheading mb-3">Description</div>
-              <p>Breakout is the class 1970s arcade game where the player has to make a ball break through layers of bricks to get through to the other side. I built this because I was very interested in making AIs that could win games. I had help from a Udemy course to accomplish this.</p>
-              <p>I made an AI using the powerful Asynchronous Advantage Actor Critic (A3C) reinforcement learning algorithm. This algorithm basically allowed the AI to know what the direction of the ball is at a given time and in the past, to better predict what the AI should do with the bar. The AI has 4 layers and an LSTM layer. The AI would play the game, and save its performance in the form of videos.</p>
-              <br>
-              <div class="subheading mb-3">Videos</div>
-              <video class="vid" controls>
-                <source src="img/breakout/1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              <video class="vid" controls>
-                <source src="img/breakout/2.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-              </video>
-              <video class="vid" controls>
-                <source src="img/breakout/3.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-              </video>
-              <p>The AI's first, middle, and final attempt</p>
-              <br>
-              </div>
-            </div>
-          </section>
+          <div class="subheading mb-3">Description</div>
+          <p>Link to the full write-up can be found <a target="_blank" href="img/umc/User Management Center Case Study (Redacted).pdf">here</a>.</p>
+          <p>The User Management Center (UMC) design project is a project I did to explore the field of UX. The UMC’s purpose was to provide an organization with the ability to manage their users and their roles for their organization so that they may control who has access to the products and the information in the platform. My personal goal for the project was to learn and apply UX principles in a professional environment. I used the high fidelity prototyping tool Axure for designing the project.</p>
+          <br>
+          <div class="subheading mb-3">Process</div>
+          <p>I used an established design process, which is listed as follows:</p>
+          <ol>
+            <li>What problem am I trying to solve?</li>
+            <li>How will I know that I have solved the problem?</li>
+            <li>Define the user tasks</li>
+            <li>Create use scenarios</li>
+            <li>Develop and prototype the design (iteratively)</li>
+            <li>Create UX Design notes</li>
+          </ol>
+          <br>
+          <div class="subheading mb-3">Concepts</div>
+          <p>Throughout the process, I used the following design concepts:</p>
+          <ul>
+            <li>Simplicity</li>
+            <li>Consistency</li>
+            <li>Multiple Indications</li>
+            <li>Accessibility</li>
+            <li>Trade-offs</li>
+          </ul>
+          <p><b>Simplicity</b> is important. To reduce user frustration, it was important to not overcrowd and over complicate the design. I learned to omit unnecessary words to keep the design clean and easily readable. Next, <b>consistency</b> is key when designing. It lowers the learning curve, which means navigating through the product becomes simpler and more intuitive. I ensured my design was consistent throughout, and with society's norms.</p>
+          <p><b>Multiple indications</b> creates a better interactive experience. It is important to provide multiple indications that a design has a function. Indications can include a change in color, size, shape, or text. Moving on, <b>accessibility</b> creates a better overall experience. As designers, we should accommodate to people who are differently abled. To ensure users can navigate the UMC smoothly, I placed a large emphasis on color contrast, size, intuitiveness, and importance of information.</p>
+          <p>Finally, <b>trade-offs</b> is something every designer will encounter during the design process. Trade-offs in design usually involves the design being either visually complicated and functionally simple, or simple designs that are functionally complicated. </p>
+          <br>
+          <div class="subheading mb-3">Lessons</div>
+          <ul>
+            <li>Iterate and get feedback regularly</li>
+            <li>Process is more important than outcome</li>
+            <li>Curiosity doesn’t kill the cat: Ask often!</li>
+          </ul>
+          <p>Iterating is very important in UX. By iterating and receiving regular feedback, I continued to improve my design and its functionalities. In the beginning, I researched and designed a huge chunk of the project, and only seeked feedback after a week’s worth of work. After receiving a ton of feedback, I had to change a large portion of my work. It was then that I realized my work style meant a lot of effort was unnecessary because of the sheer amount of changes during the feedback session. Thus, I started asking for feedback regularly. This reduced my workload and improved my design skills.</p>
+          <p>The process has been tremendous. At every step of the project, I learned something new, either by observing those around me, or through the mistakes I made and feedback I received. Looking back, I am proud that my UX design skills have improved over time. On a personal development note, I am a better communicator of my ideas and work, I pick up information quicker, and work more seamlessly with the team.</p>
+          <p>Whenever I was curious, I would compile my questions and ask them during my feedback session. Oftentimes it helped clear the issue, and mistakes that were obscure would be clearer. More importantly, sometimes questions led to new ideas and improvements.</p>
+          <br>
+          <div class="subheading mb-3">Iterations</div>
+          <p>The following is an example of iteration of my tab design. For more, check out the full write up available <a target="_blank" href="img/umc/User Management Center Case Study (Redacted).pdf">here</a>.</p>
+          <p>The initial tab design was a thin rectangle underneath the opened tab. This design was bad because it did not show any relation between the opened tab and current view, and was hard to see. Moreover, the view was extremely crowded and complicated, with all the information dislayed as is. After receiving feedback, the second iteration showed more relation with the current view. I also experimented with side tabs, which was well received. With the third iteration, I fixed the colors, accessibility, and further improved the overall simplicity. The final product is simple, obvious, and shows a connection between the opened tab and current view. It showed enough information for the user to make a decision. Additional information can be accessed with a simple click.</p>
+          <img class="img" src="img/umc/tabs_iteration/0.png" alt="">
+          <p>First design</p>
+          <br>
+          <img class="imgfour" src="img/umc/tabs_iteration/1a.png" alt="">
+          <img class="imgfour" src="img/umc/tabs_iteration/1b.png" alt="">
+          <img class="imgfour" src="img/umc/tabs_iteration/1c.png" alt="">
+          <img class="imgfour" src="img/umc/tabs_iteration/1d.png" alt="">
+          <img class="imgfour" src="img/umc/tabs_iteration/1e.png" alt="">
+          <img class="imgfour" src="img/umc/tabs_iteration/1f.png" alt="">
+          <p>Second set of designs</p>
+          <br>
+          <img class="imgthree" src="img/umc/tabs_iteration/2a.png" alt="">
+          <img class="imgthree" src="img/umc/tabs_iteration/2b.png" alt="">
+          <img class="imgthree" src="img/umc/tabs_iteration/2c.png" alt="">
+          <p>Third set of designs</p>
+          <br>
+          <img class="img" src="img/umc/tabs_iteration/Final.png" alt="">
+          <p>Final design</p>
+          <br>
         </div>
+      </div>
+      <div id="space"></div>
+      <div class="my-auto" id="saveme">
+        <div class="my-auto">
+          <br>
+          <h2 class="mb-5">Save Me!</h2>
+
+          <div class="subheading mb-3">Description</div>
+          <p>The Save Me! design project is my first team design project. It was the inspiration of a friend whom I studied abroad with. Its purpose is to assist people who are lost and are in dire need of assistance. It allows users of the application to find their way home, get help from locals, contact emergency services, among other things. We used the prototyping tool Marvel App.</p>
+          <br>
+          <div class="subheading mb-3">Process</div>
+          <p>I used an established design process, which is listed as follows:</p>
+          <ol>
+            <li>Empathize</li>
+            <li>Define</li>
+            <li>Ideate</li>
+            <li>Prototype</li>
+            <li>Test</li>
+          </ol>
+          <p>In the first step, we observe, engage and immerse ourselves within our user's problems. We conduct interviews and plan for extreme users. Moving on, the define stage helps to unpack and synthesize the information from the previous step. Here, we use design principles, and create journey maps and personas. The next three steps are part of an iterative process where we come up with ideas, prototype, test, and refine our prototype.</p>
+          <br>
+          <div class="subheading mb-3">Concepts</div>
+          <p>Throughout the process, I used the following design thinking concepts:</p>
+          <ul>
+            <li>Radical Collaboration</li>
+            <li>Empatize</li>
+            <li>Go Broad, Narrow Down</li>
+            <li>Fail Early</li>
+            <li>Show, Don't Tell</li>
+            <li>Be Mindful of Process</li>
+          </ul>
+          <br>
+          <div class="subheading mb-3">Lessons</div>
+          <ul>
+            <li>Disagree and commit</li>
+            <li>Never stop redesigning</li>
+            <li>Be observant</li>
+          </ul>
+          <p>Teamwork is extremely important. From start to finish, my team and I grew closer as friends and colleagues. Even then, there are times when we had different opinions and ideas. It was vital to us that we could still commit to the work even if we disagreed. It was more important to us that we worked well together, rather than fight for what we think is best for the design.</p>
+          <p>We never stopped improving our design, even when a deadline was approaching. We would always think of new ideas and approaches to the problems. This chasing perfection mindset helped improve our design over the course of the project. Finally, being observant was key. We ensured we observed our interviewees and testers well, and also observed our work schedule and each other's capabilities. The opinions, body expression and words during the usability testings were pivotal in our design's directions. </p>
+          <br>
+          <div class="subheading mb-3">Iterations</div>
+          <p><b>Main screen</b></p>
+          <p>The main screen went through drastic changes. The first design was very 'old fashioned', crowded, and did not show much meaning. The icons were confusing and unclear as to what they did exactly. After a couple iterations, it was much better! The design was modern and simple, and the clear bright colors meant navigating through the app was easier.</p>
+          <img class="imgtwo" src="img/saveme/mainscreen/1.png" alt="">
+          <img class="imgtwo" src="img/saveme/mainscreen/2.png" alt="">
+          <p>The first and final design</p>
+          <br>
+          <p><b>Status Report</b></p>
+          <p>The first status report design was shown as is on the main screen. This made the main screen very crowded. On top of that, the pop-up nature of the status report meant no two attributes could be seen at the same time. The second design puts them all in a new page. However, the color and scheme and small texts made it not user-friendly. The final design incorporated the main screen's colors and simplicity. This showed great contrast between the different attributes. Also, the larger texts provided better usability.</p>
+          <img class="imgtwo" src="img/saveme/statusreport/1a.png" alt="">
+          <img class="imgtwo" src="img/saveme/statusreport/1b.png" alt="">
+          <p>First set of designs</p>
+          <br>
+          <img class="imgtwo" src="img/saveme/statusreport/2a.png" alt="">
+          <img class="imgtwo" src="img/saveme/statusreport/2b.png" alt="">
+          <p>Second set of designs</p>
+          <br>
+          <img class="imgtwo" src="img/saveme/statusreport/3.png" alt="">
+          <p>Final design</p>
+          <br>
+          <p><b>Lost</b></p>
+          <p>The lost function is meant to allow the user to find their way home using a backtrack method. Also, if necessary, the user can see and contact nearby users for help. This is useful for emergencies such as being lost and incapacitated, phone's battery is low, and so on.</p>
+          <p>The first design had a map and a walked path, but that was it. Nearby users was a click away, but also meant the map would be hidden. This wasn't useful, and added additional layers of complexity. Also, the back button's location was inconsistent. The second design improved by showing current users locations, but did not show additional information as to how long it took to get to them. The final design incorporated various feedbacks. It provided useful information such as bus stops, clinics/hospital locations, distance and time to get to all locations, and the amount of time needed to get back to 'home'.</p>
+          <img class="imgtwo" src="img/saveme/lost/1a.png" alt="">
+          <img class="imgtwo" src="img/saveme/lost/1b.png" alt="">
+          <p>First set of designs</p>
+          <br>
+          <img class="imgtwo" src="img/saveme/lost/2a.png" alt="">
+          <img class="imgtwo" src="img/saveme/lost/2b.png" alt="">
+          <p>Second set of designs</p>
+          <br>
+          <img class="imgtwo" src="img/saveme/lost/3a.png" alt="">
+          <img class="imgtwo" src="img/saveme/lost/3b.png" alt="">
+          <img class="imgtwo" src="img/saveme/lost/3c.png" alt="">
+          <p>Final design</p>
+          <br>
+        </div>
+      </div>
+    </section>
+  </div>
 
 
   <!-- Bootstrap core JavaScript -->
